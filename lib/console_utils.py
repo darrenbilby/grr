@@ -400,3 +400,8 @@ def MigrateLabelsSeparator(token=None):
   print "Processed set labels: %d, mapped labels: %d" % (
       processed_set_labels,
       processed_mapped_labels)
+
+def ClientIdToHostname(client_id):
+  client = OpenClient(client_id)[0]
+  if client and client.Get('Host'):
+    return client.Get('Host').Summary()
