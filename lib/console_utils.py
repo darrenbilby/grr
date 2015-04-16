@@ -405,3 +405,8 @@ def ClientIdToHostname(client_id):
   client = OpenClient(client_id)[0]
   if client and client.Get('Host'):
     return client.Get('Host').Summary()
+
+def ClientIdToSummary(client_id):
+  client = OpenClient(client_id)[0]
+  if client and client.Get('KnowledgeBase'):
+    return client.Get('KnowledgeBase').Summary()
