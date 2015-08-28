@@ -416,9 +416,8 @@ def MigrateLabelsSeparator(token=None):
       processed_set_labels,
       processed_mapped_labels)
 
-
 def ClientIdToHostname(client_id, token=None):
-  """Quick helper for scripts to get a hostname from a client ID."""
+  """ Quick helper for scripts to get a hostname from a client ID."""
   client = OpenClient(client_id, token=token)[0]
   if client and client.Get("Host"):
     return client.Get("Host").Summary()
